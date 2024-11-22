@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DailytotalActivity">
+
+    <TextView
+        android:id="@+id/tvDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/tv_detail"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tv_pers"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDetail" />
+
+    <TextView
+        android:id="@+id/tvEmployee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/tv_employee"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvSalary"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/etName1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPers" />
+
+    <TextView
+        android:id="@+id/tvSalary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/tv_salary"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvTime"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvEmployee"
+        app:layout_constraintTop_toBottomOf="@+id/tvPers" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/tv_time"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvSalary"
+        app:layout_constraintTop_toBottomOf="@+id/tvPers" />
+
+    <EditText
+        android:id="@+id/etName1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:inputType="text"
+        app:layout_constraintEnd_toStartOf="@+id/etSalary1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEmployee" />
+
+    <EditText
+        android:id="@+id/etSalary1"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/etStartTimeH1"
+        app:layout_constraintStart_toEndOf="@+id/etName1"
+        app:layout_constraintTop_toBottomOf="@+id/tvSalary" />
+
+    <EditText
+        android:id="@+id/etStartTimeH1"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:inputType="time"
+        app:layout_constraintEnd_toEndOf="@id/tvStartColon1"
+        app:layout_constraintTop_toBottomOf="@+id/tvTime" />
+
+    <TextView
+        android:id="@+id/tvStartColon1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/tv_colon"
+        app:layout_constraintTop_toBottomOf="@+id/tvTime"
+        app:layout_constraintEnd_toStartOf="@+id/etStartTimeM1" />
+
+    <EditText
+        android:id="@+id/etStartTimeM1"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:inputType="time"
+        app:layout_constraintEnd_toStartOf="@+id/tvTilde1"
+        app:layout_constraintTop_toBottomOf="@+id/tvTime" />
+
+    <TextView
+        android:id="@+id/tvTilde1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/tv_tilde"
+        app:layout_constraintTop_toBottomOf="@+id/tvTime"
+        app:layout_constraintEnd_toStartOf="@+id/etEndTimeH1" />
+
+    <EditText
+        android:id="@+id/etEndTimeH1"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:inputType="time"
+        app:layout_constraintEnd_toStartOf="@+id/tvEndColon1"
+        app:layout_constraintTop_toBottomOf="@+id/tvTime" />
+
+    <TextView
+        android:id="@+id/tvEndColon1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/tv_colon"
+        app:layout_constraintTop_toBottomOf="@+id/tvTime"
+        app:layout_constraintEnd_toStartOf="@+id/etEndTimeM1" />
+
+    <EditText
+        android:id="@+id/etEndTimeM1"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:inputType="time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTime" />
+
+    <EditText
+        android:id="@+id/etName2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:inputType="text"
+        app:layout_constraintEnd_toStartOf="@+id/etSalary2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etName1" />
+
+    <EditText
+        android:id="@+id/etSalary2"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/etStartTimeH2"
+        app:layout_constraintStart_toEndOf="@+id/etName2"
+        app:layout_constraintTop_toBottomOf="@+id/etSalary1" />
+
+    <EditText
+        android:id="@+id/etStartTimeH2"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:inputType="time"
+        app:layout_constraintEnd_toEndOf="@id/tvStartColon2"
+        app:layout_constraintTop_toBottomOf="@+id/etStartTimeH1" />
+
+    <TextView
+        android:id="@+id/tvStartColon2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/tv_colon"
+        app:layout_constraintTop_toBottomOf="@+id/etStartTimeH1"
+        app:layout_constraintEnd_toStartOf="@+id/etStartTimeM2" />
+
+    <EditText
+        android:id="@+id/etStartTimeM2"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:inputType="time"
+        app:layout_constraintEnd_toStartOf="@+id/tvTilde2"
+        app:layout_constraintTop_toBottomOf="@+id/etStartTimeH1" />
+
+    <TextView
+        android:id="@+id/tvTilde2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/tv_tilde"
+        app:layout_constraintTop_toBottomOf="@+id/etStartTimeH1"
+        app:layout_constraintEnd_toStartOf="@+id/etEndTimeH2" />
+
+    <EditText
+        android:id="@+id/etEndTimeH2"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:inputType="time"
+        app:layout_constraintEnd_toStartOf="@+id/tvEndColon2"
+        app:layout_constraintTop_toBottomOf="@+id/etStartTimeH1" />
+
+    <TextView
+        android:id="@+id/tvEndColon2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/tv_colon"
+        app:layout_constraintTop_toBottomOf="@+id/etStartTimeH1"
+        app:layout_constraintEnd_toStartOf="@+id/etEndTimeM2" />
+
+    <EditText
+        android:id="@+id/etEndTimeM2"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:inputType="time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etStartTimeH1" />
+
+    <EditText
+        android:id="@+id/etName3"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:inputType="text"
+        app:layout_constraintEnd_toStartOf="@+id/etSalary3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etName2" />
+
+    <EditText
+        android:id="@+id/etSalary3"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/etStartTimeH3"
+        app:layout_constraintStart_toEndOf="@+id/etName3"
+        app:layout_constraintTop_toBottomOf="@+id/etSalary2" />
+
+    <EditText
+        android:id="@+id/etStartTimeH3"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:inputType="time"
+        app:layout_constraintEnd_toEndOf="@id/tvStartColon3"
+        app:layout_constraintTop_toBottomOf="@+id/etStartTimeH2" />
+
+    <TextView
+        android:id="@+id/tvStartColon3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/tv_colon"
+        app:layout_constraintTop_toBottomOf="@+id/etStartTimeH2"
+        app:layout_constraintEnd_toStartOf="@+id/etStartTimeM3" />
+
+    <EditText
+        android:id="@+id/etStartTimeM3"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:inputType="time"
+        app:layout_constraintEnd_toStartOf="@+id/tvTilde3"
+        app:layout_constraintTop_toBottomOf="@+id/etStartTimeH2" />
+
+    <TextView
+        android:id="@+id/tvTilde3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/tv_tilde"
+        app:layout_constraintTop_toBottomOf="@+id/etStartTimeH2"
+        app:layout_constraintEnd_toStartOf="@+id/etEndTimeH3" />
+
+    <EditText
+        android:id="@+id/etEndTimeH3"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:inputType="time"
+        app:layout_constraintEnd_toStartOf="@+id/tvEndColon3"
+        app:layout_constraintTop_toBottomOf="@+id/etStartTimeH2" />
+
+    <TextView
+        android:id="@+id/tvEndColon3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/tv_colon"
+        app:layout_constraintTop_toBottomOf="@+id/etStartTimeH2"
+        app:layout_constraintEnd_toStartOf="@+id/etEndTimeM3" />
+
+    <EditText
+        android:id="@+id/etEndTimeM3"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:inputType="time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etStartTimeH2" />
+
+    <EditText
+        android:id="@+id/etName4"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:inputType="text"
+        app:layout_constraintEnd_toStartOf="@+id/etSalary4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etName3" />
+
+    <EditText
+        android:id="@+id/etSalary4"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/etStartTimeH4"
+        app:layout_constraintStart_toEndOf="@+id/etName4"
+        app:layout_constraintTop_toBottomOf="@+id/etSalary3" />
+
+    <EditText
+        android:id="@+id/etStartTimeH4"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:inputType="time"
+        app:layout_constraintEnd_toEndOf="@id/tvStartColon4"
+        app:layout_constraintTop_toBottomOf="@+id/etStartTimeH3" />
+
+    <TextView
+        android:id="@+id/tvStartColon4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/tv_colon"
+        app:layout_constraintTop_toBottomOf="@+id/etStartTimeH3"
+        app:layout_constraintEnd_toStartOf="@+id/etStartTimeM4" />
+
+    <EditText
+        android:id="@+id/etStartTimeM4"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:inputType="time"
+        app:layout_constraintEnd_toStartOf="@+id/tvTilde4"
+        app:layout_constraintTop_toBottomOf="@+id/etStartTimeH3" />
+
+    <TextView
+        android:id="@+id/tvTilde4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/tv_tilde"
+        app:layout_constraintTop_toBottomOf="@+id/etStartTimeH3"
+        app:layout_constraintEnd_toStartOf="@+id/etEndTimeH4" />
+
+    <EditText
+        android:id="@+id/etEndTimeH4"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:inputType="time"
+        app:layout_constraintEnd_toStartOf="@+id/tvEndColon4"
+        app:layout_constraintTop_toBottomOf="@+id/etStartTimeH3" />
+
+    <TextView
+        android:id="@+id/tvEndColon4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/tv_colon"
+        app:layout_constraintTop_toBottomOf="@+id/etStartTimeH3"
+        app:layout_constraintEnd_toStartOf="@+id/etEndTimeM4" />
+
+    <EditText
+        android:id="@+id/etEndTimeM4"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:inputType="time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etStartTimeH3" />
+
+    <TextView
+        android:id="@+id/tvExp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tv_exp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etName4" />
+
+    <TextView
+        android:id="@+id/tvStore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/tv_store"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvPrice"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvExp" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tv_price"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvStore"
+        app:layout_constraintTop_toBottomOf="@+id/tvExp" />
+
+    <EditText
+        android:id="@+id/etStore1"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toStartOf="@+id/etPrice1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvStore" />
+
+    <EditText
+        android:id="@+id/etPrice1"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/etStore1"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrice" />
+
+    <EditText
+        android:id="@+id/etStore2"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toStartOf="@+id/etPrice2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etStore1" />
+
+    <EditText
+        android:id="@+id/etPrice2"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/etStore2"
+        app:layout_constraintTop_toBottomOf="@+id/etPrice1" />
+
+    <EditText
+        android:id="@+id/etStore3"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toStartOf="@+id/etPrice3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etStore2" />
+
+    <EditText
+        android:id="@+id/etPrice3"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/etStore3"
+        app:layout_constraintTop_toBottomOf="@+id/etPrice2" />
+
+    <EditText
+        android:id="@+id/etStore4"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toStartOf="@+id/etPrice4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etStore3" />
+
+    <EditText
+        android:id="@+id/etPrice4"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/etStore4"
+        app:layout_constraintTop_toBottomOf="@+id/etPrice3" />
+
+    <EditText
+        android:id="@+id/etStore5"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toStartOf="@+id/etPrice5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etStore4" />
+
+    <EditText
+        android:id="@+id/etPrice5"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/etStore5"
+        app:layout_constraintTop_toBottomOf="@+id/etPrice4" />
+
+    <Button
+        android:id="@+id/btTopBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:onClick="BackButtonClick"
+        android:text="@string/bt_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btCalc"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btCalc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:onClick="CalcButtonClick"
+        android:text="@string/bt_calc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btTopBack" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

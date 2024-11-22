@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">会計サンプル</string>
+    <string name="tv_title">業務選択</string>
+    <string name="bt_accounting">お会計</string>
+    <string name="bt_total">日計</string>
+
+    <string name="tv_customer">お客様情報の入力</string>
+    <string name="tv_name">名前(店名、グループ名等)</string>
+    <string name="tv_num">人数</string>
+    <string name="tv_sex">代表者の性別</string>
+    <string name="rb_male">男性</string>
+    <string name="rb_female">女性</string>
+    <string name="rb_trans">トランス</string>
+    <string name="rb_unknown">不明</string>
+    <string name="bt_next">次へ</string>
+    <string name="bt_back">戻る</string>
+
+    <string name="tv_accounting">お会計</string>
+    <string name="tv_order">ご注文内容の選択</string>
+    <string name="tv_set">セット</string>
+    <string name="tv_charge">チャージ</string>
+    <string name="tv_shochu">焼酎</string>
+    <string name="tv_hig">角ハイ</string>
+    <string name="tv_kicchomu">吉四六</string>
+    <string name="tv_mac">マッカラン</string>
+    <string name="tv_hibiki">響</string>
+    <string name="tv_can">缶もの</string>
+    <string name="tv_shot">ショット</string>
+    <string name="tv_soft">ソフトドリンク</string>
+    <string name="tv_yellow">ヴーヴ・イエロー</string>
+    <string name="tv_pink">モエネク</string>
+    <string name="tv_flower">ベルエポック</string>
+    <string name="bt_conf">確認画面へ</string>
+
+    <string name="tv_settlement">決済</string>
+    <string name="tv_subtotal">小計</string>
+    <string name="tv_tax">税金</string>
+    <string name="tv_total">合計</string>
+    <string name="bt_settlement">決済</string>
+    
+    <string name="tv_detail">詳細入力</string>
+    <string name="tv_pers">人件費</string>
+    <string name="tv_employee">従業員名</string>
+    <string name="tv_salary">時給</string>
+    <string name="tv_time">勤務時間</string>
+    <string name="tv_colon">:</string>
+    <string name="tv_tilde">～</string>
+    <string name="tv_exp">経費</string>
+    <string name="tv_store">店舗名</string>
+    <string name="tv_price">金額</string>
+    <string name="bt_calc">計算</string>
+
+    <string name="tv_dailytotal">日計</string>
+    <string name="bt_fin">終了</string>
+
+</resources>
